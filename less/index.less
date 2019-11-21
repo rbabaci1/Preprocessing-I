@@ -100,13 +100,6 @@ html, body {
 					}
 				}
 			}
-			.footer-specs {
-				.center();
-				font-size: 1.6rem;
-				background: #4545d3;
-				padding: 3rem 0;
-				color: white;
-			}
 			.radius-bottom-l-r {
 				border-bottom-right-radius: 100px;
     			border-bottom-left-radius: 100px;
@@ -119,6 +112,13 @@ html, body {
 					font-size: 1.5rem;
 					line-height: 2.5rem;
 				}
+			}
+			.footer-specs {
+				.center();
+				font-size: 1.6rem;
+				background: #4545d3;
+				padding: 3rem 0;
+				color: white;
 			}
 		///////////////////	  Mixin End	  ///////////////////
 
@@ -141,6 +141,17 @@ html, body {
 			padding: 1rem 0;
 			margin-bottom: 3rem;
 			.radius-bottom-l-r();
+
+			@media (max-width: 380px) {
+				h1 {
+					font-size: 2rem;
+					font-weight: bold;
+				}
+				h2 {
+					font-size: 1rem;
+				}
+				
+			}
 		}
 		h1 {
 			font-size: @font + 1;
@@ -155,6 +166,7 @@ html, body {
 			padding: 17rem 0 2rem 0;
 		}
 		img {
+
 			.size();
 			position: relative;
 			bottom: 2.5rem;
@@ -172,7 +184,18 @@ html, body {
 			display: flex;
 			justify-content: space-evenly;
 			padding-bottom: 3rem;
-			
+
+			@media (max-width: 500px) {
+				flex-direction: column-reverse;
+				justify-content: space-between;
+				
+				button {
+					width: 60%;
+					padding: 1rem 0;
+					margin: 1rem 0;
+				}
+			}
+
 			button {
 				.button-specs();
 				&:hover {
@@ -181,13 +204,23 @@ html, body {
 			}
 		}
 	}
-
 	///////////////////	  Main content  ///////////////////
 	.main-content {
 		display: flex;
 		padding: 2rem 0;
 		background: #393940;
-		height: 100%;
+		
+		@media (max-width: 500px) {
+			flex-direction: column;
+			
+			.main-left-side {
+				text-align: center;
+			}
+			div {
+				width: 100%!important;
+			}
+		}
+
 		.main-left-side {
 			width: 34%;
 			background: #393940;
@@ -195,16 +228,15 @@ html, body {
 			padding: 0 1rem;
 			h1 {
 				font-size: @font - 0.2;
-				margin-left: 1.5rem;
 			}
 			p {
 				font-size: 1.5rem;
-				margin: 1.6rem 0 3rem 1.5rem;
+				margin: 1.6rem 0 3rem 0;
 				line-height: 2.3rem;
 				color: darken(white, 15%);
 			}
 		}		
-	}	
+		
 		.main-right-side {
 			width: 66%;
 			margin-right: 2rem;
@@ -244,6 +276,8 @@ html, body {
 					.center();
 					.bold();
 					padding: 1rem 0;
+					background: #787474;
+					color: white;
 				}
 
 				table {
@@ -267,7 +301,10 @@ html, body {
 			}
 		}
 		///////////////////	  Footer  ///////////////////
-		footer {
-			.footer-specs();
-		}
+		
+	}
+	footer {
+		.footer-specs();
+	}
+
 }
