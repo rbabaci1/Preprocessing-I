@@ -189,7 +189,7 @@ body {
 .footer-specs {
   text-align: center;
   font-size: 1.6rem;
-  background: #4545d3;
+  background: #4a4ada;
   padding: 3rem 0;
   color: white;
 }
@@ -207,7 +207,6 @@ body {
   top: 0;
   width: 100%;
   z-index: 99;
-  opacity: 0.9;
   padding: 1rem 0;
   margin-bottom: 3rem;
   border-bottom-right-radius: 100px;
@@ -281,7 +280,7 @@ body {
 }
 .container .main-content {
   display: flex;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background: #393940;
 }
 @media (max-width: 500px) {
@@ -390,7 +389,7 @@ body {
 .container footer {
   text-align: center;
   font-size: 1.6rem;
-  background: #4545d3;
+  background: #4a4ada;
   padding: 3rem 0;
   color: white;
 }
