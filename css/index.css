@@ -23,6 +23,10 @@
   background: wheat;
   border: 2px solid;
   box-shadow: inset 0 0 10px black;
+  outline: none;
+}
+.button-specs:focus {
+  background: pink;
 }
 .bold {
   font-weight: bold;
@@ -264,6 +268,10 @@ header nav button {
   background: wheat;
   border: 2px solid;
   box-shadow: inset 0 0 10px black;
+  outline: none;
+}
+header nav button:focus {
+  background: pink;
 }
 header nav button:hover {
   background: gold;
