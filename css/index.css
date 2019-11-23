@@ -1,3 +1,55 @@
+.center {
+  text-align: center;
+}
+.size {
+  height: 25rem;
+  width: 25rem;
+}
+.header-specs {
+  background-color: #45454d;
+  color: white;
+  text-align: center;
+}
+.hovering {
+  background: gold;
+  font-size: 3.5rem;
+  border: 4px solid #071a4e;
+}
+.button-specs {
+  padding: 1.5rem 2rem;
+  font-size: 3rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  background: wheat;
+  border: 2px solid;
+  box-shadow: inset 0 0 10px black;
+}
+.bold {
+  font-weight: bold;
+}
+.h1-height h1 {
+  height: 10%;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.table-tr-specs tr:nth-child(even) {
+  background-color: #c7c2c2;
+}
+.table-tr-specs tr:nth-child(odd) td,
+.table-tr-specs tr:nth-child(odd) th {
+  border-right: 1px solid silver;
+}
+.radius-bottom-l-r {
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.main-content-right-size h1 {
+  font-size: 2rem;
+}
+.main-content-right-size p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -134,74 +186,12 @@ html,
 body {
   font-size: 62.5%;
 }
-.center {
-  text-align: center;
-}
-.size {
-  height: 25rem;
-  width: 25rem;
-}
-.header-specs {
+header {
   background-color: #45454d;
   color: white;
   text-align: center;
 }
-.hovering {
-  background: gold;
-  font-size: 3.5rem;
-  border: 4px solid #071a4e;
-}
-.button-specs {
-  padding: 1.5rem 2rem;
-  font-size: 3rem;
-  border-radius: 0.7rem;
-  cursor: pointer;
-  background: wheat;
-  border: 2px solid;
-  box-shadow: inset 0 0 10px black;
-}
-.bold {
-  font-weight: bold;
-}
-.h1-height h1 {
-  height: 10%;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-.table-tr-specs tr:nth-child(even) {
-  background-color: #c7c2c2;
-}
-.table-tr-specs tr:nth-child(odd) td,
-.table-tr-specs tr:nth-child(odd) th {
-  border-right: 1px solid silver;
-}
-.radius-bottom-l-r {
-  border-bottom-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-}
-.main-content-right-size h1 {
-  font-size: 2rem;
-}
-.main-content-right-size p {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-}
-.footer-specs {
-  text-align: center;
-  font-size: 1.6rem;
-  background: #4a4ada;
-  padding: 3rem 0;
-  color: white;
-}
-.container {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.container header {
-  background-color: #45454d;
-  color: white;
-  text-align: center;
-}
-.container header section {
+header section {
   background: #4a4ada;
   position: fixed;
   top: 0;
@@ -213,27 +203,27 @@ body {
   border-bottom-left-radius: 100px;
 }
 @media (max-width: 415px) {
-  .container header section h1 {
+  header section h1 {
     font-size: 2rem;
     font-weight: bold;
   }
-  .container header section h2 {
+  header section h2 {
     font-size: 1rem;
   }
 }
-.container header h1 {
+header h1 {
   font-size: 3rem;
   letter-spacing: 0.66666667rem;
   line-height: 5rem;
 }
-.container header h2 {
+header h2 {
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
 }
-.container header .img {
+header .img {
   padding: 17rem 0 2rem 0;
 }
-.container header img {
+header img {
   height: 25rem;
   width: 25rem;
   position: relative;
@@ -241,30 +231,32 @@ body {
   border-radius: 50%;
   border: 4px solid #6d6a74;
 }
-.container header img:hover {
+header img:hover {
   transition: 1.5s;
   transform: rotate(360deg);
   border: 4px solid #4a4ada;
   cursor: pointer;
 }
-.container header nav {
+header nav {
   font-size: 2rem;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: row;
   padding: 8rem 0;
 }
 @media (max-width: 500px) {
-  .container header nav {
-    flex-direction: column-reverse;
+  header nav {
+    display: flex;
     justify-content: space-between;
+    flex-direction: column-reverse;
   }
-  .container header nav button {
+  header nav button {
     width: 60%;
     padding: 1rem 0;
     margin: 1rem 0;
   }
 }
-.container header nav button {
+header nav button {
   padding: 1.5rem 2rem;
   font-size: 3rem;
   border-radius: 0.7rem;
@@ -273,18 +265,32 @@ body {
   border: 2px solid;
   box-shadow: inset 0 0 10px black;
 }
-.container header nav button:hover {
+header nav button:hover {
   background: gold;
   font-size: 3.5rem;
   border: 4px solid #071a4e;
 }
+footer {
+  text-align: center;
+  font-size: 1.6rem;
+  background: #4a4ada;
+  padding: 3rem 0;
+  color: white;
+}
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .container .main-content {
   display: flex;
+  justify-content: 0;
+  flex-direction: 0;
   padding: 5rem 0;
   background: #393940;
 }
 @media (max-width: 500px) {
   .container .main-content {
+    display: flex;
+    justify-content: 0;
     flex-direction: column;
   }
   .container .main-content .main-left-side {
@@ -326,6 +332,7 @@ body {
 .container .main-content .main-right-side .top-section {
   display: flex;
   justify-content: space-between;
+  flex-direction: 0;
 }
 .container .main-content .main-right-side .top-section .top-left-side {
   width: 49%;
@@ -385,11 +392,4 @@ body {
 .container .main-content .main-right-side .bottom-section table tr:nth-child(odd) td,
 .container .main-content .main-right-side .bottom-section table tr:nth-child(odd) th {
   border-right: 1px solid silver;
-}
-.container footer {
-  text-align: center;
-  font-size: 1.6rem;
-  background: #4a4ada;
-  padding: 3rem 0;
-  color: white;
 }
